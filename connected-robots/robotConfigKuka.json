@@ -1,0 +1,70 @@
+{
+	"robot": {
+		"name": "KUKA KR6 R700-2",
+		"topic": "kuka"
+	},
+	"substitutionString": "<EXT><Command>$instruction$</Command><Value>$value$</Value><Pos01X>$pos1_x$</Pos01X><Pos01Y>$pos1_y$</Pos01Y><Pos01Z>$pos1_z$</Pos01Z><Pos01A>$pos1_a$</Pos01A><Pos01B>$pos1_b$</Pos01B><Pos01C>$pos1_c$</Pos01C></EXT>",
+	"substitutionMapping": {
+		"instruction": "$instruction$",
+		"value": "$value$",
+		"pos1_x": "$pos1_x$",
+		"pos1_y": "$pos1_y$",
+		"pos1_z": "$pos1_z$",
+		"pos1_a": "$pos1_a$",
+		"pos1_b": "$pos1_b$",
+		"pos1_c": "$pos1_c$",
+		"pos2_x": "$pos2_x$",
+		"pos2_y": "$pos2_y$",
+		"pos2_z": "$pos2_z$",
+		"pos2_a": "$pos2_a$",
+		"pos2_b": "$pos2_b$",
+		"pos2_c": "$pos2_c$",
+		"pos3_x": "$pos3_x$",
+		"pos3_y": "$pos3_y$",
+		"pos3_z": "$pos3_z$",
+		"pos3_a": "$pos3_a$",
+		"pos3_b": "$pos3_b$",
+		"pos3_c": "$pos3_c$"
+	},
+	"regexMapping": {
+		"pos1_x": "<ActPosX>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActPosX>",
+		"pos1_y": "<ActPosY>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActPosY>",
+		"pos1_z": "<ActPosZ>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActPosZ>",
+		"pos1_a": "<ActPosA>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActPosA>",
+		"pos1_b": "<ActPosB>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActPosB>",
+		"pos1_c": "<ActPosC>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActPosC>",
+		"pos2_x": "<ActJntA1>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActJntA1>",
+		"pos2_y": "<ActJntA2>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActJntA2>",
+		"pos2_z": "<ActJntA3>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActJntA3>",
+		"pos2_a": "<ActJntA4>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActJntA4>",
+		"pos2_b": "<ActJntA5>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActJntA5>",
+		"pos2_c": "<ActJntA6>([+-]?(?:[0-9]*[.])?[0-9]+)<\\/ActJntA6>"
+	},
+	"topics": [
+		{
+			"topic": "status/joint",
+			"type": "pub",
+			"command": "joint_status"
+		},
+		{
+			"topic": "status/hand",
+			"type": "pub",
+			"command": "hand_status"
+		},
+		{
+			"topic": "status/pos",
+			"type": "pub",
+			"command": "pos_status"
+		},
+		{
+			"topic": "command/move",
+			"type": "sub",
+			"command": "mov_command"
+		},
+		{
+			"topic": "command/stop",
+			"type": "sub",
+			"command": "stop_command"
+		}
+	]
+}

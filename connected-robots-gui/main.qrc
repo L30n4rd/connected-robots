@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/3d">
+        <file>3d/main.qml</file>
+        <file>3d/RobotArm/qmldir</file>
+        <file>3d/RobotArm/RobotArm.qml</file>
+        <file>3d/RobotArm/meshes/claw1.mesh</file>
+        <file>3d/RobotArm/meshes/claw2.mesh</file>
+        <file>3d/RobotArm/meshes/arm1.mesh</file>
+        <file>3d/RobotArm/meshes/arm2.mesh</file>
+        <file>3d/RobotArm/meshes/arm3.mesh</file>
+        <file>3d/RobotArm/meshes/arm4.mesh</file>
+        <file>3d/RobotArm/meshes/base.mesh</file>
+        <file>3d/RobotArm/meshes/clawRoot.mesh</file>
+        <file>3d/RobotArm/meshes/root.mesh</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/fh-logo.svg</file>
+        <file>images/precision_manufacturing_FILL0_wght400_GRAD0_opsz48.svg</file>
+    </qresource>
+</RCC>
